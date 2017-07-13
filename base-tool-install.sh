@@ -1,12 +1,14 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get install htop curl git maven vim i3 tmux gtypist zsh cowsay cmatrix -y
+sudo apt-get update && sudo apt-get install htop curl git maven vim tmux gtypist zsh cowsay cmatrix -y
 
 # setup zsh
 chsh -s $(which zsh)
 
+nvm_version=v0.33.2
+
 # nvm and node
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/$nvm_version/install.sh | bash
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
