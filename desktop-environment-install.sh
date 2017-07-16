@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get install i3 feh -y
+sudo apt-get update && sudo apt-get install i3 i3blocks feh lxappearance rofi compton -y
 
 # download and install fonts
 
@@ -27,3 +27,13 @@ mv $unpack_target/YosemiteSanFranciscoFont-master/*.ttf $fonts_folder/
 
 rm $fa_archive $yosemite_archive
 rm -rf $unpack_target
+
+# install Arc GTK theme
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
+sudo apt-get update
+sudo apt-get install arc-theme -y
+
+# install moka icon theme
+sudo add-apt-repository ppa:moka/daily
+sudo apt-get update
+sudo apt-get install moka-icon-theme faba-icon-theme faba-mono-icons -y
