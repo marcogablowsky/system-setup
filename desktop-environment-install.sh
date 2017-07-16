@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get install i3 feh 
+sudo apt-get update && sudo apt-get install i3 feh -y
 
 # download and install fonts
 

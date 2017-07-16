@@ -93,16 +93,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 
-set $workspace1 "1: Console"
-set $workspace2 "2: Browser"
-set $workspace3 "3: "
+set $workspace1 "1: "
+set $workspace2 "2: "
+set $workspace3 "3: "
 set $workspace4 "4: "
 set $workspace5 "5: "
 set $workspace6 "6: "
 set $workspace7 "7: "
 set $workspace8 "8: "
 set $workspace9 "9: "
-set $workspace10 "10: Music"
+set $workspace10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
@@ -131,6 +131,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # assign programs to workspaces
 # requires the programs class found through 'xprop' and then clicking the program window
 assign [class="Firefox"] $workspace2
+assign [class="Spring Tool Suite"] $workspace3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
