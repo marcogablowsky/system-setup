@@ -13,6 +13,11 @@ archive=$download_folder/sts-$sts_version.tar.gz
 
 install_folder=$HOME/dev/sts
 
+if [ -d "$install_folder/sts-$sts_version" ]; then
+    echo "Spring Tool Suite $sts_version already installed"
+    exit 0
+fi
+
 wget -O $archive $download_url 
 
 tar -xzvf $archive -C $install_folder 
@@ -22,3 +27,7 @@ mv $install_folder/sts-$sts_version/sts-$sts_version.RELEASE $install_folder/sts
 ln -nfs $install_folder/sts-$sts_version $install_folder/current
 
 rm $archive 
+
+echo "Creating symlink for sts"
+sudo ln -nfs $install_folder/current/sts/STS /usr/local/bin/spring-tool-suite
+
