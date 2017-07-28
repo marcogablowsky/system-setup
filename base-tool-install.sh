@@ -1,8 +1,9 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get install htop curl git maven vim tmux gtypist zsh cowsay cmatrix -y
+sudo apt-get update && sudo apt-get install htop curl git maven vim tmux gtypist zsh texlive texlive-latex-extra texlive-lang-german cowsay cmatrix -y
 
 # setup zsh
+echo "Setting zsh as default shell"
 chsh -s $(which zsh)
 
 nvm_version=v0.33.2
