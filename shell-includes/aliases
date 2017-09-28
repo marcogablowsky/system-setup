@@ -1,0 +1,6 @@
+alias gti=git
+
+alias update='sudo apt-get update && sudo apt-get upgrade -y'
+alias typeg='gtypist ktde.typ'
+
+alias lsa='ls -lsah'

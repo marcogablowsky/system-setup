@@ -1,0 +1,29 @@
+" turn off vi compatibility mode
+set nocompatible
+
+" add ** to searchpath, allows 'fuzzy' filesearch
+set path+=**
+
+" display current and relative line numbers
+set relativenumber
+set number
+set ruler
+
+" command line completion
+set wildmenu
+
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+set nowrap
+
+" enable file type detection
+filetype plugin on
+
+" syntax highlighting
+syntax enable
+
+" Colorscheme
+set background=dark
+colorscheme solarized
+
+hi Normal ctermbg=none
