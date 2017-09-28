@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get install i3 i3blocks feh lxappearance rofi compton evince -y
+sudo apt-get update && sudo apt-get install i3 i3blocks feh lxappearance compton evince -y
 
 # download and install fonts
 
