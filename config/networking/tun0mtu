@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case "$IFACE" in
+    tun0)
+        ifconfig tun0 mtu 1300 
+        exit 0
+        ;;
+    *)
+        ;;
+esac
+
