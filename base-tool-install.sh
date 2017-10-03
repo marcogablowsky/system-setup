@@ -8,4 +8,6 @@ sudo apt-get update && sudo apt-get install htop curl git vim tmux gtypist zsh l
 echo "Setting zsh as default shell"
 chsh -s $(which zsh)
 
-
+# install ale plugin for vim 8
+mkdir -p ~/.vim/pack/git-plugins/start
+git clone https://github.com/w0rp/ale.git ~/.vim/pack/git-plugins/start/ale
