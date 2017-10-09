@@ -41,3 +41,8 @@ for file in $HOME/system-setup/shell-includes/*; do
         source $file
     fi
 done
+
+LOCAL_ADDITIONS="$HOME/.local-shell-additions"
+if [ -f $LOCAL_ADDITIONS ]; then
+    source $LOCAL_ADDITIONS 
+fi

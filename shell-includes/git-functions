@@ -1,0 +1,11 @@
+function chkout {
+    git checkout -B "$1" "origin/$1"
+}
+
+function commit {
+    git commit -m "$1"
+}
+
+function rebase {
+    git pull --rebase
+}
