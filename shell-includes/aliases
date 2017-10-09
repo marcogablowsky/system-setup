@@ -5,4 +5,4 @@ alias update='sudo apt-get update && sudo apt-get upgrade -y'
 alias typeg='gtypist ktde.typ'
 
 alias ls='ls --color=auto'
-alias lsa='ls -lsah'
+alias lsa='ls -lah'
