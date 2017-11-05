@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # remove openjdk
 sudo apt-get purge openjdk-\* 
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 nvm_version=v0.33.2
 
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/$nvm_version/install.sh | bash

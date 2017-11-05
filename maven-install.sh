@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 MVN_PACKAGE_PATH="$1"
 MVN_PACKAGE=$(basename $MVN_PACKAGE_PATH)
 TMPDIR=/tmp/maven
