@@ -12,9 +12,11 @@ set ruler
 " command line completion
 set wildmenu
 
-set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 set nowrap
+
+set noswapfile
 
 " enable file type detection
 filetype plugin on
@@ -28,7 +30,7 @@ colorscheme solarized
 
 hi Normal ctermbg=none
 
-let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \   'javascript': ['eslint']
 \ }
