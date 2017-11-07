@@ -9,12 +9,17 @@
   filesEncoding = utf-8
 [alias]
   st = status
+  stp= !"git status --porcelain"
   br = branch
+  bra= !"git branch -a"
   df = diff
   
-  pr = !"git pull --rebase"
-  po = !"git push origin"
+  re = !"git pull --rebase"
+  pu = !"git push origin"
   cm = !"git commit -m "
+
+  cl = !"git reset --hard && git clean fd"
+  pr = !"git remote prune origin"
 
   lg = !"git lg1"
   lg1 = !"git lg1-specific --all"

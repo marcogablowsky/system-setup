@@ -1,3 +1,4 @@
+alias grep='grep --color'
 alias gti=git
 alias gitroot='cd $GITROOT'
 
