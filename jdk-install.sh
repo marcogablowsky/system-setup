@@ -3,7 +3,7 @@
 set -e
 
 # remove openjdk
-sudo apt-get purge openjdk-\* 
+sudo apt purge openjdk-\* 
 
 JDK_PACKAGE_PATH="$1"
 JDK_PACKAGE=$(basename $JDK_PACKAGE_PATH)

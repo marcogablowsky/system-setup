@@ -4,7 +4,7 @@ set -e
 
 # add ppa for backport of vim 8
 sudo add-apt-repository ppa:jonathonf/vim
-sudo apt-get update && sudo apt-get install htop curl git vim tmux gtypist zsh ranger lm-sensors texlive texlive-latex-extra texlive-lang-german cowsay cmatrix -y
+sudo apt update && sudo apt install htop curl git vim tmux gtypist zsh ranger lm-sensors texlive texlive-latex-extra texlive-lang-german pandoc cowsay cmatrix -y
 
 # setup zsh
 echo "Setting zsh as default shell"

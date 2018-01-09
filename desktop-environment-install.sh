@@ -2,7 +2,7 @@
 
 set -e 
 
-sudo apt-get update && sudo apt-get install i3 i3blocks feh lxappearance compton evince -y
+sudo apt update && sudo apt install i3 i3blocks feh lxappearance compton evince -y
 
 # download and install fonts
 
@@ -31,11 +31,11 @@ rm $fa_archive $yosemite_archive
 rm -rf $unpack_target
 
 # install Arc GTK theme
-sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' > /etc/apt/sources.list.d/arc-theme.list"
-sudo apt-get update
-sudo apt-get install arc-theme -y
+sudo add-apt-repository ppa:fossfreedom/arc-gtk-theme-daily
+sudo apt update
+sudo apt install arc-theme -y
 
 # install moka icon theme
 sudo add-apt-repository ppa:moka/daily
-sudo apt-get update
-sudo apt-get install moka-icon-theme faba-icon-theme faba-mono-icons -y
+sudo apt update
+sudo apt install moka-icon-theme faba-icon-theme faba-mono-icons -y
