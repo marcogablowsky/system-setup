@@ -136,7 +136,7 @@ assign [class="Firefox"] $workspace2
 assign [class="Spring Tool Suite"] $workspace3
 assign [class="VirtualBox"] $workspace6
 assign [class="Remmina"] $workspace7
-assign [class="skypeforlinux"] $workspace8
+assign [class="Skype"] $workspace8
 assign [class="Steam"] $workspace9
 
 # reload the configuration file
@@ -209,7 +209,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 exec xrandr --output LVDS1 --primary
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 exec compton -f
 exec --no-startup-id nm-applet
 

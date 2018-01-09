@@ -7,22 +7,31 @@ set path+=**
 " display current and relative line numbers
 set relativenumber
 set number
-set ruler
 
 " command line completion
 set wildmenu
 
-set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
+" disable line wrapping
 set nowrap
 
 set noswapfile
 
+" underline current line
+set cursorline
+
+" show matching braces
+set showmatch 
+
 " enable file type detection
-filetype plugin on
+filetype plugin indent on
 
 " syntax highlighting
 syntax enable
+
+" full python syntax highlighting
+let python_highlight_all=1
 
 " Colorscheme
 set background=dark
