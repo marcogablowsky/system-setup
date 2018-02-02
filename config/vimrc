@@ -4,6 +4,8 @@ set nocompatible
 " add ** to searchpath, allows 'fuzzy' filesearch
 set path+=**
 
+set encoding=utf-8
+
 " display current and relative line numbers
 set relativenumber
 set number
@@ -24,6 +26,19 @@ set cursorline
 " show matching braces
 set showmatch 
 
+" split behaviour and navigation
+set splitbelow
+set splitright
+nnoremap <C-J> <C-W><C-j>
+nnoremap <C-H> <C-W><C-h>
+nnoremap <C-K> <C-W><C-k>
+nnoremap <C-L> <C-W><C-l>
+
+" folding
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
 " enable file type detection
 filetype plugin indent on
 
@@ -35,7 +50,7 @@ let python_highlight_all=1
 
 " Colorscheme
 set background=dark
-colorscheme solarized
+colorscheme zenburn
 
 hi Normal ctermbg=none
 
@@ -44,6 +59,9 @@ call plug#begin()
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
+Plug 'Valloric/YouCompleteMe'
+Plug 'jnurmine/Zenburn'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
@@ -51,3 +69,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \   'javascript': ['eslint']
 \ }
+
+let mapleader=" "
+map <leader>d :YcmCompleter GoToDefinition<CR>
+map <leader>r :YcmCompleter GoToReferences<CR>
