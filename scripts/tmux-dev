@@ -19,6 +19,14 @@ tmux send-keys -t Dev:2.1 "cd $SOURCEPATH && clear && vim" C-m
 # Third window for local terminal
 tmux new-window -t Dev -n Console
 
+# Fourth window for logbook
+tmux new-window -t Dev -n Logbook
+tmux send-keys -t Dev:4.1 "lb" C-m
+
+# Fifth window for gtypist
+tmux new-window -t Dev -n Typing
+tmux send-keys -t Dev:5.1 "typeg" C-m
+
 # Select active window and attach
 tmux select-window -t Dev:1
 tmux attach -t Dev
