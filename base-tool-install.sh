@@ -1,17 +1,14 @@
 #!/bin/bash
 
 set -e
+scriptdir=$(dirname $0)
+. $scriptdir/utils.sh
 
-# add ppa for backport of vim 8
-sudo add-apt-repository ppa:jonathonf/vim
-sudo apt update && sudo apt install htop curl git vim tmux gtypist zsh ranger lm-sensors texlive texlive-latex-extra texlive-lang-german pandoc cowsay cmatrix -y
+packages="htop lm_sensors curl git tmux gtypist zsh ranger pandoc cowsay cmatrix texlive-core texlive-latexextra"
+install_packages $packages
 
-# setup zsh
-echo "Setting zsh as default shell"
-chsh -s $(which zsh)
-
-# install ale plugin for vim 8
-if [ ! -d ~/.vim/pack/git-plugins/start/ale ]; then
-  mkdir -p ~/.vim/pack/git-plugins/start
-  git clone https://github.com/w0rp/ale.git ~/.vim/pack/git-plugins/start/ale
+if [ -z $(ps -p $$ | grep zsh) ]; then 
+  echo "Setting zsh as default shell"
+  chsh -s $(which zsh) $(whoami)
+  ln -nfs $scriptdir/config/zshrc ~/.zshrc
 fi

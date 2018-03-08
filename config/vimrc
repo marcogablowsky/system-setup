@@ -49,17 +49,16 @@ syntax enable
 let python_highlight_all=1
 
 " Colorscheme
-set background=dark
+set background=light
 colorscheme zenburn
 
-hi Normal ctermbg=none
+" hi Normal ctermbg=none
 
 call plug#begin()
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe'
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
 
@@ -69,7 +68,3 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \   'javascript': ['eslint']
 \ }
-
-let mapleader=" "
-map <leader>d :YcmCompleter GoToDefinition<CR>
-map <leader>r :YcmCompleter GoToReferences<CR>
