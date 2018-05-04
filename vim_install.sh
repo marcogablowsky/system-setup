@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-scriptdir=$(dirname $0)
+scriptdir="$( cd "$( dirname "$0" )" && pwd )"
 . $scriptdir/utils.sh
 
 distro=$(get_distro)
