@@ -5,9 +5,9 @@ set -e
 # java ide
 mkdir -p $HOME/dev/sts
 
-sts_version="3.9.1"
+sts_version="3.9.3"
 major_eclipse_version="4.7"
-eclipse_version="4.7.1a"
+eclipse_version="4.7.3"
 
 download_folder=/tmp
 download_url=http://download.springsource.com/release/STS/$sts_version.RELEASE/dist/e$major_eclipse_version/spring-tool-suite-$sts_version.RELEASE-e$eclipse_version-linux-gtk-x86_64.tar.gz
