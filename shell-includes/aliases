@@ -7,3 +7,5 @@ alias typeg='gtypist ktde.typ'
 
 alias ls='ls --color=auto'
 alias lsa='ls -lah'
+
+alias mvn='mvn clean install -DskipTests -T 4'
