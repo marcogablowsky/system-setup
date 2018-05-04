@@ -44,7 +44,7 @@ done
 
 LOCAL_ADDITIONS="$HOME/.local-shell-additions"
 if [ -f $LOCAL_ADDITIONS ]; then
-    source $LOCAL_ADDITIONS 
+    source $LOCAL_ADDITIONS
 fi
 
 export NVM_DIR="$HOME/.nvm"
