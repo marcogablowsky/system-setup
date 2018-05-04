@@ -1,3 +1,8 @@
 function chkout {
     git checkout -B "$1" "origin/$1"
 }
+
+function clone {
+    # requires environment variables
+    git clone "$GIT_DEFAULT_PROTOCOL"://"$GIT_DEFAULT_ORIGIN_USER"@"$GIT_DEFAULT_ORIGIN"/"$GIT_DEFAULT_REMOTE_PATH""$1".git "$2"
+}
