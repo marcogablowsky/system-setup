@@ -1,11 +1,15 @@
 alias grep='grep --color'
 alias gti=git
-alias gitroot='cd $GITROOT'
-
-alias update='sudo apt update && sudo apt upgrade -y'
-alias typeg='gtypist ktde.typ'
+alias gr='cd $GITROOT'
 
 alias ls='ls --color=auto'
 alias lsa='ls -lah'
 
+# Edit Vim Config
+alias evc='vim ~/.vimrc'
+alias vi=vim
+alias v=vi
+
 alias mvn='mvn clean install -DskipTests -T 4'
+
+alias tt='gtypist ktde.typ'
