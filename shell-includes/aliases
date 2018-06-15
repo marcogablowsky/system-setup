@@ -2,9 +2,8 @@ alias grep='grep --color'
 alias gti=git
 alias gr='cd $GITROOT'
 
-alias ls='ls --color=auto'
+alias ls='ls -lh --color=auto'
 alias lsa='ls -lah'
-alias ls='ls -lh'
 
 # Edit Vim Config
 alias evc='vim ~/.vimrc'
