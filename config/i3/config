@@ -18,6 +18,7 @@ set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
 
 set $term i3-sensible-terminal
+set $browser firefox
 
 # window color
 #                       border             background         text                 indicator
@@ -126,6 +127,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # requires the programs class found through 'xprop' and then clicking the program window
 assign [class="Firefox"] $workspace2
 assign [class="Spring Tool Suite"] $workspace3
+assign [class="KeePass2"] $workspace4
 assign [class="VirtualBox"] $workspace6
 assign [class="Remmina"] $workspace7
 assign [class="Skype"] $workspace8
@@ -146,6 +148,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 bindsym $mod+r          exec $term -e ranger
-bindsym $mod+w          exec --no-startup-id $BROWSER
+bindsym $mod+p          exec keepass
+bindsym $mod+w          exec --no-startup-id $browser
 bindsym $mod+z          gaps outer current plus 5
 bindsym $mod+Shift+z    gaps outer current minus 5
