@@ -20,6 +20,9 @@ set nowrap
 
 set noswapfile
 
+" ignore case when using search pattern
+set ic
+
 " underline current line
 set cursorline
 
@@ -50,23 +53,24 @@ let python_highlight_all=1
 
 " Colorscheme
 set background=light
-colorscheme zenburn
-
+colorscheme solarized
+set notgc
 hi Normal ctermbg=none
 
 call plug#begin()
 
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'scrooloose/nerdtree'
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
-nnoremap <F4> :NERDTreeToggle<CR>
+let g:netrw_banner=0
 
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_fixers = {
 \   'javascript': ['eslint']
 \ }
+
+autocmd BufRead,BufNewFile *.md setlocal spell spelllang=de_de
+

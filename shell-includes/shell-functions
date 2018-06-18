@@ -1,7 +1,6 @@
 function lb() {
     vim ~/logbook/$(date '+%Y-%m-%d').md
 }
-
 function bl() {
-    vim ~/mybacklog.md
+    vim ~/Documents/backlog.md
 }

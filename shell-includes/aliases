@@ -1,15 +1,19 @@
 alias grep='grep --color'
+alias ls='ls -lh --color=auto'
+alias lsa='ls -lah'
+
 alias gti=git
 alias gr='cd $GITROOT'
 
-alias ls='ls --color=auto'
-alias lsa='ls -lah'
+alias cfv='vim ~/.vimrc'
+alias cfz='vim ~/.zshrc'
+alias cfi='vim ~/.i3/config'
+alias cfr='vim ~/.config/ranger/rc.conf'
 
-# Edit Vim Config
-alias evc='vim ~/.vimrc'
 alias vi=vim
 alias v=vi
-
-alias mvn='mvn clean install -DskipTests -T 4'
+alias r=ranger
 
 alias tt='gtypist ktde.typ'
+
+alias mvn='mvn clean install -DskipTests -T 4'
