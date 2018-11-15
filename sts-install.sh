@@ -5,12 +5,12 @@ set -e
 # java ide
 mkdir -p $HOME/dev/sts
 
-sts_version="3.9.3"
-major_eclipse_version="4.7"
-eclipse_version="4.7.3"
+sts_version="4.0.1.RELEASE"
+major_eclipse_version="4.9"
+eclipse_version="4.9.0"
 
 download_folder=/tmp
-download_url=http://download.springsource.com/release/STS/$sts_version.RELEASE/dist/e$major_eclipse_version/spring-tool-suite-$sts_version.RELEASE-e$eclipse_version-linux-gtk-x86_64.tar.gz
+download_url=https://download.springsource.com/release/STS4/$sts_version/dist/e$major_eclipse_version/spring-tool-suite-4-$sts_version-e$eclipse_version-linux.gtk.x86_64.tar.gz
 archive=$download_folder/sts-$sts_version.tar.gz
 
 install_folder=$HOME/dev/sts
@@ -24,12 +24,10 @@ wget -O $archive $download_url
 
 tar -xzvf $archive -C $install_folder 
 
-mv $install_folder/sts-bundle $install_folder/sts-$sts_version
-mv $install_folder/sts-$sts_version/sts-$sts_version.RELEASE $install_folder/sts-$sts_version/sts
 ln -nfs $install_folder/sts-$sts_version $install_folder/current
 
 rm $archive 
 
 echo "Creating symlink for sts"
-sudo ln -nfs $install_folder/current/sts/STS /usr/local/bin/spring-tool-suite
+sudo ln -nfs $install_folder/current/SpringToolSuite4 /usr/local/bin/spring-tool-suite
 
