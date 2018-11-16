@@ -26,10 +26,12 @@
   mt = mergetool
 
   c = !"git commit "
+  a = !"git add "
   aa = !"git add . && git status"
 
-  p = !"git push origin"
+  p = pull
   pr = !"git pull --rebase"
+  po = !"git push origin"
 
   rhc = !"git reset --hard && git clean fd"
   rp = !"git remote prune origin"
