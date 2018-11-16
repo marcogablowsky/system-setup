@@ -2,18 +2,21 @@ alias grep='grep --color'
 alias ls='ls -lh --color=auto'
 alias lsa='ls -lah'
 
-alias gti=git
 alias gr='cd $GITROOT'
 
-alias cfv='vim ~/.vimrc'
-alias cfz='vim ~/.zshrc'
+# config files -> prefix 'cf'
+alias cfg='vim ~/.gitconfig'
 alias cfi='vim ~/.i3/config'
 alias cfr='vim ~/.config/ranger/rc.conf'
+alias cfv='vim ~/.vimrc'
+alias cfz='vim ~/.zshrc'
 
+# programm shortcuts
+alias g=git
+alias r=ranger
 alias vi=vim
 alias v=vi
-alias r=ranger
 
 alias tt='gtypist ktde.typ'
 
-alias mvn='mvn clean install -DskipTests -T 4'
+alias mb='mvn clean install -DskipTests -T 4'
