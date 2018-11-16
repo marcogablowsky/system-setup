@@ -23,6 +23,9 @@ set noswapfile
 " ignore case when using search pattern
 set ic
 
+" search while typing
+set is
+
 " underline current line
 set cursorline
 
@@ -52,10 +55,10 @@ syntax enable
 let python_highlight_all=1
 
 " Colorscheme
-set background=light
-colorscheme solarized
+set background=dark
+colorscheme zenburn
 set notgc
-hi Normal ctermbg=none
+"hi Normal ctermbg=none
 
 call plug#begin()
 
