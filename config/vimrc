@@ -55,8 +55,8 @@ syntax enable
 let python_highlight_all=1
 
 " Colorscheme
-set background=dark
-colorscheme zenburn
+set background=light
+colorscheme solarized
 set notgc
 "hi Normal ctermbg=none
 

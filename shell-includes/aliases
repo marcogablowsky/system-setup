@@ -1,8 +1,11 @@
 alias grep='grep --color'
-alias ls='ls -lh --color=auto'
-alias lsa='ls -lah'
+alias c=clear
+alias ls='c && ls -lh --color=auto'
+alias lsa='c && ls -lah'
 
+# folder navigation shortcuts
 alias gr='cd $GITROOT'
+alias dl='cd ~/Downloads'
 
 # config files -> prefix 'cf'
 alias cfg='vim ~/.gitconfig'
@@ -20,3 +23,4 @@ alias v=vi
 alias tt='gtypist ktde.typ'
 
 alias mb='mvn clean install -DskipTests -T 4'
+alias mm='mb -pl -am'
