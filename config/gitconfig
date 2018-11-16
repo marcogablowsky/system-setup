@@ -8,24 +8,31 @@
 [i18n]
   filesEncoding = utf-8
 [merge]
-    tool = meld
+    conflictStyle = diff3
+    tool = vimdiff
 [mergetool "meld"]
     cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
 [alias]
-  st   = status
-  stp  = !"git status --porcelain"
-  br   = branch
-  bra  = !"git branch -a"
-  bramd= !"git branch -r --merged origin/develop"
-  bramm= !"git branch -r --merged origin/master"
-  df   = diff
+  s   = status
+  sp  = !"git status --porcelain"
 
-  re = !"git pull --rebase"
-  pu = !"git push origin"
-  cm = !"git commit -m "
+  b   = branch
+  ba  = !"git branch -a"
+  bmd= !"git branch -r --merged origin/develop"
+  bmm= !"git branch -r --merged origin/master"
 
-  cl = !"git reset --hard && git clean fd"
-  pr = !"git remote prune origin"
+  d = diff
+  m = !"git merge --no-ff"
+  mt = mergetool
+
+  c = !"git commit "
+  aa = !"git add . && git status"
+
+  p = !"git push origin"
+  pr = !"git pull --rebase"
+
+  rhc = !"git reset --hard && git clean fd"
+  rp = !"git remote prune origin"
 
   lg  = !"git lg1"
   lg1 = !"git lg1-specific --all"
