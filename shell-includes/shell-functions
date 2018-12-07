@@ -1,5 +1,11 @@
 function lb() {
-    vim ~/logbook/$(date '+%Y-%m-%d').md
+    CURR_DATE=$(date '+%Y-%m-%d')
+    FILE_NAME=~/logbook/$CURR_DATE.md
+    if [ ! -f $FILE_NAME ]; then
+        echo "# $CURR_DATE" > $FILE_NAME
+    fi
+    vim $FILE_NAME
+
 }
 function bl() {
     vim ~/Documents/backlog.md
