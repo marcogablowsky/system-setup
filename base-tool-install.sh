@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-SCRIPTDIR="$( CD "$( DIRNAME "$0" )" && PWD )"
+SCRIPTDIR="$( cd "$( dirname "$0" )" && pwd )"
 . $SCRIPTDIR/utils.sh
 
 DISTRO=get_distro
