@@ -4,12 +4,6 @@ set -e
 scriptdir="$( cd "$( dirname "$0" )" && pwd )"
 . $scriptdir/utils.sh
 
-distro=$(get_distro)
-if test $distro == 'ubuntu'; then
-  # add ppa for backport of vim 8
-  sudo add-apt-repository ppa:jonathonf/vim
-fi
-
 install_packages "vim"
 
 # install ale plugin for vim 8
