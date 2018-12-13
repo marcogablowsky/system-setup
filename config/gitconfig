@@ -33,6 +33,7 @@
   pr = !"git pull --rebase"
   po = !"git push origin"
 
+  rh = !"git reset --hard"
   rhc = !"git reset --hard && git clean fd"
   rp = !"git remote prune origin"
 
