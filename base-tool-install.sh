@@ -1,13 +1,22 @@
 #!/bin/bash
 
 set -e
-scriptdir="$( cd "$( dirname "$0" )" && pwd )"
-. $scriptdir/utils.sh
+SCRIPTDIR="$( CD "$( DIRNAME "$0" )" && PWD )"
+. $SCRIPTDIR/utils.sh
 
-packages="htop lm_sensors curl git tmux gtypist zsh ranger pandoc cowsay cmatrix texlive-core texlive-latexextra"
-install_packages $packages
+DISTRO=get_distro
 
-echo $scriptdir
+COMMON_PACKAGES="htop curl git tmux gtypist zsh ranger pandoc"
+
+if [ $DISTRO == "manjaro" ]; then
+    DIST_PACKAGES="lm_sensors texlive-core texlive-latexextra"
+elif [ $DISTRO == "ubuntu" ]; then
+    DIST_PACKAGES="lm-sensors texlive texlive-latex-extra texlive-lang-german"
+fi
+
+install_packages $COMMON_PACKAGES $DIST_PACKAGES
+
+echo $SCRIPTDIR
 if [ -z $(echo $SHELL | grep zsh) ]; then
   echo "Setting zsh as default shell"
   chsh -s $(which zsh) $(whoami)
