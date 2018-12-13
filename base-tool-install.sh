@@ -4,7 +4,7 @@ set -e
 SCRIPTDIR="$( cd "$( dirname "$0" )" && pwd )"
 . $SCRIPTDIR/utils.sh
 
-DISTRO=get_distro
+DISTRO=$(get_distro)
 
 COMMON_PACKAGES="htop curl git tmux gtypist zsh ranger pandoc"
 
@@ -20,5 +20,5 @@ echo $SCRIPTDIR
 if [ -z $(echo $SHELL | grep zsh) ]; then
   echo "Setting zsh as default shell"
   chsh -s $(which zsh) $(whoami)
-  ln -nfs $scriptdir/config/zshrc ~/.zshrc
+  ln -nfs $SCRIPTDIR/config/zshrc ~/.zshrc
 fi
