@@ -23,4 +23,4 @@ alias v=vi
 alias tt='gtypist ktde.typ'
 
 alias mb='mvn clean install -DskipTests -T 4'
-alias mm='mb -pl -am'
+alias mm='mb -am -pl'
