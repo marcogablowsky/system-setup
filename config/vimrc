@@ -1,79 +1,54 @@
-" turn off vi compatibility mode
-set nocompatible
+
+call plug#begin()
+
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'altercation/vim-colors-solarized'
+Plug 'dylanaraps/wal.vim'
+
+call plug#end()
+
+" Basic settings
+    set nocompatible
+    filetype plugin on
+    syntax on
+    set showmatch
+    set encoding=utf-8
+    set number relativenumber
+    set splitbelow splitright
+    set noswapfile
+    set nowrap
+
+" Enable autocompletion:
+    set wildmode=longest,list,full
+
+" Disables automatic commenting on newline:
+	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Nerd tree
+	map <C-n> :NERDTreeToggle<CR>
+	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+colorscheme wal
 
 " add ** to searchpath, allows 'fuzzy' filesearch
 set path+=**
 
-set encoding=utf-8
-
-" display current and relative line numbers
-set relativenumber
-set number
-
-" command line completion
-set wildmenu
-
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
-
-" disable line wrapping
-set nowrap
-
-set noswapfile
-
 " ignore case when using search pattern
 set ic
 
-" search while typing
-set is
+let g:netrw_banner=0
 
-" underline current line
-set cursorline
-
-" show matching braces
-set showmatch 
-
-" split behaviour and navigation
-set splitbelow
-set splitright
-nnoremap <C-J> <C-W><C-j>
-nnoremap <C-H> <C-W><C-h>
-nnoremap <C-K> <C-W><C-k>
-nnoremap <C-L> <C-W><C-l>
+" Simpler split navigation
+nnoremap <C-j> <C-W>j
+nnoremap <C-h> <C-W>h
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
 
 " folding
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
 
-" enable file type detection
-filetype plugin indent on
-
-" syntax highlighting
-syntax enable
-
-" full python syntax highlighting
-let python_highlight_all=1
-
-" Colorscheme
-set background=light
-colorscheme solarized
-set notgc
-"hi Normal ctermbg=none
-
-call plug#begin()
-
-Plug 'vim-airline/vim-airline'
-Plug 'jnurmine/Zenburn'
-Plug 'altercation/vim-colors-solarized'
-
-call plug#end()
-
-let g:netrw_banner=0
-
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_fixers = {
-\   'javascript': ['eslint']
-\ }
-
-autocmd BufRead,BufNewFile *.md setlocal spell spelllang=de_de
-
+" Automatically deletes all trailing whitespace on save.
+	autocmd BufWritePre * %s/\s\+$//e
